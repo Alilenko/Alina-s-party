@@ -27,8 +27,11 @@ export async function PUT(request: NextRequest) {
     body
   );
 
-  if (error) {
-    return NextResponse.json({ error, strippedFields }, { status: 500 });
+  if (error || !data) {
+    return NextResponse.json(
+      { error: error || "Не вдалося зберегти профіль", strippedFields },
+      { status: 500 }
+    );
   }
 
   const reward = await syncProfileCompleteReward(supabase, data);
