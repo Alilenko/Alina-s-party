@@ -22,23 +22,23 @@ export default function HomeHero({ portraitUrl, name }: HomeHeroProps) {
   const portrait = resolvePortrait(portraitUrl);
 
   return (
-    <section className="relative w-full px-4 pb-2 pt-8">
-      <div className="relative flex min-h-[300px] items-stretch sm:min-h-[340px]">
+    <section className="relative w-full px-4 pb-1 pt-2">
+      <div className="relative flex min-h-[200px] items-stretch">
         <div className="flex flex-1 flex-col items-center justify-center pr-36 text-center sm:pr-40">
           <Crown
-            size={22}
-            className="mb-2 text-party-gold/90"
+            size={18}
+            className="mb-1 text-party-gold/90"
             strokeWidth={1.5}
           />
-          <h1 className="party-title text-2xl font-bold leading-tight tracking-[0.18em] text-party-gold-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] sm:text-3xl">
+          <h1 className="party-title text-xl font-bold leading-tight tracking-[0.15em] text-party-gold-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             Alina&apos;s Party
           </h1>
-          <div className="mt-3 flex items-center gap-2">
-            <span className="text-[10px] text-party-gold/60">✦</span>
-            <p className="text-xs tracking-[0.2em] text-party-cream/90 drop-shadow-md">
+          <div className="mt-1.5 flex items-center gap-1.5">
+            <span className="text-[9px] text-party-gold/60">✦</span>
+            <p className="text-[10px] tracking-[0.15em] text-party-cream/90 drop-shadow-md">
               Свято починається тут
             </p>
-            <span className="text-[10px] text-party-gold/60">✦</span>
+            <span className="text-[9px] text-party-gold/60">✦</span>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function HomeHero({ portraitUrl, name }: HomeHeroProps) {
             />
           </div>
           <p
-            className="mt-3 text-center text-xl leading-none text-party-gold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-2xl"
+            className="mt-1.5 text-center text-base leading-none text-party-gold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
             style={{ fontFamily: "var(--font-script), cursive" }}
           >
             Let&apos;s celebrate!
