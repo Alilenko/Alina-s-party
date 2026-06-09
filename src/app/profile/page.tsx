@@ -56,7 +56,7 @@ export default function ProfilePage() {
       const res = await fetch("/api/profile", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, photo_url: uploadData.url }),
+        body: JSON.stringify({ photo_url: uploadData.url }),
       });
       const data = await res.json();
       if (data.participant) {

@@ -29,10 +29,10 @@
 
 @layer utilities {
   .party-card {
-    background: var(--color-party-card);
+    background: rgba(30, 8, 9, 0.82);
     border: 1px solid rgba(201, 169, 98, 0.3);
     border-radius: 16px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
   }
 
   .party-gold-text {
@@ -46,10 +46,11 @@
   }
 
   .party-btn {
-    background: linear-gradient(135deg, rgba(201, 169, 98, 0.2), rgba(139, 115, 64, 0.15));
+    background: linear-gradient(135deg, rgba(30, 8, 9, 0.75), rgba(201, 169, 98, 0.15));
     border: 1px solid rgba(201, 169, 98, 0.5);
     border-radius: 12px;
     color: var(--color-party-gold-light);
+    backdrop-filter: blur(10px);
     transition: all 0.2s ease;
   }
 

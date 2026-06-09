@@ -40,6 +40,14 @@ export function buildProfilePayload(body: Record<string, unknown>) {
         : null;
   }
 
+  // Старі колонки більше не використовуємо — очищаємо, щоб не «повертався» тестовий текст
+  if (payload.about_me !== undefined) {
+    payload.interests = null;
+  }
+  if (payload.hobby !== undefined) {
+    payload.fun_fact = null;
+  }
+
   return payload;
 }
 

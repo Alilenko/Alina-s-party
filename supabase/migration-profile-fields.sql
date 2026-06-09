@@ -8,6 +8,10 @@ ALTER TABLE participants ADD COLUMN IF NOT EXISTS hobby TEXT;
 ALTER TABLE participants ADD COLUMN IF NOT EXISTS dream_place TEXT;
 ALTER TABLE participants ADD COLUMN IF NOT EXISTS secret_question TEXT;
 
--- Перенести дані зі старих колонок
+-- Перенести дані зі старих колонок (якщо ще не перенесено)
 UPDATE participants SET about_me = interests WHERE about_me IS NULL AND interests IS NOT NULL;
 UPDATE participants SET hobby = fun_fact WHERE hobby IS NULL AND fun_fact IS NOT NULL;
+
+-- Прибрати старі колонки, щоб тестовий текст не з’являвся знову
+UPDATE participants SET interests = NULL WHERE interests IS NOT NULL;
+UPDATE participants SET fun_fact = NULL WHERE fun_fact IS NOT NULL;

@@ -76,13 +76,6 @@ export default function ParticipantProfilePage() {
           )}
         </div>
 
-        {participant.quote && (
-          <div className="party-card mt-4 p-5 text-center">
-            <p className="text-sm italic text-party-cream/70">
-              &ldquo;{participant.quote}&rdquo;
-            </p>
-          </div>
-        )}
       </div>
 
       <BottomNav />

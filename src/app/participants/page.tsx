@@ -37,9 +37,9 @@ export default function ParticipantsPage() {
                   Іменинниця
                 </div>
               )}
-              {(p.about_me || p.interests) && (
+              {p.about_me && (
                 <p className="mt-1 line-clamp-1 text-xs text-party-cream/50">
-                  {p.about_me || p.interests}
+                  {p.about_me}
                 </p>
               )}
             </div>

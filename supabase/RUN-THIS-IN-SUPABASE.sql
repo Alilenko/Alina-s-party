@@ -12,6 +12,8 @@ ALTER TABLE participants ADD COLUMN IF NOT EXISTS secret_question TEXT;
 
 UPDATE participants SET about_me = interests WHERE about_me IS NULL AND interests IS NOT NULL;
 UPDATE participants SET hobby = fun_fact WHERE hobby IS NULL AND fun_fact IS NOT NULL;
+UPDATE participants SET interests = NULL WHERE interests IS NOT NULL;
+UPDATE participants SET fun_fact = NULL WHERE fun_fact IS NOT NULL;
 
 -- === Секретний квест ===
 

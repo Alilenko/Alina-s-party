@@ -65,11 +65,11 @@ export const EMPTY_PROFILE_FORM: ProfileFormData = {
 
 export function participantToForm(p: Participant): ProfileFormData {
   return {
-    about_me: p.about_me || p.interests || "",
+    about_me: p.about_me || "",
     how_knows_alina: p.how_knows_alina || "",
     favorite_movie: p.favorite_movie || "",
     favorite_music: p.favorite_music || "",
-    hobby: p.hobby || p.fun_fact || "",
+    hobby: p.hobby || "",
     dream_place: p.dream_place || "",
     quote: p.quote || "",
     secret_question: p.secret_question || "",
@@ -80,8 +80,6 @@ export function getProfileValue(
   p: Participant,
   key: (typeof PROFILE_FIELDS)[number]["key"]
 ): string | null {
-  if (key === "about_me") return p.about_me || p.interests || null;
-  if (key === "hobby") return p.hobby || p.fun_fact || null;
   return p[key] || null;
 }
 
